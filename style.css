@@ -34,13 +34,14 @@ h2
 p
 {
 	text-align: justify;
+	margin-top: 0;
 }
 
 blockquote::before
 {
 	content: "";
 	display: block;
-	width: 30%;
+	width: 20%;
 	margin: 0 auto;
 	padding-bottom: 10px;
 	border-top: 1.5px solid var(--limetka)
@@ -58,7 +59,7 @@ blockquote::after
 {
 	content: "";
 	display: block;
-	width: 30%;
+	width: 20%;
 	margin: 0 auto;
 	padding-top: 10px;
 	border-bottom: 1.5px solid var(--limetka);
@@ -75,6 +76,12 @@ header p:first-of-type
 	background-color: var(--svetla);
 	padding: 15px;
 	width: 250px;
+}
+
+.tip:nth-of-type(2)
+{
+	width: 100%;
+	border-right: 3px solid var(--oranzova);
 }
 
 .tip p
@@ -96,21 +103,21 @@ header p:first-of-type
 .tip-vlevo
 {
 	border-right: 3px solid var(--oranzova);
-	margin: 0 0 20px 40px;
-	float: right;
+	margin: 0 40px 20px 0;
+	float: left;
 }
 
 .tip-vpravo
 {
 	border-left: 3px solid var(--oranzova);
-	margin: 0 20px 40px 0;
-	float: left;
+    margin: 0 0 20px 40px;
+	float: right;
 }
 
 figure
 {	
 	width: 450px;
-	margin: 0 auto;
+	margin: 0 auto 30px auto;
 }
 
 figure img
@@ -129,9 +136,116 @@ footer p, a
 	color: var(--seda);
 }
 
+@media screen and (min-width: 600px)
+{
+	.blog
+	{
+		display: grid;
+		grid-template-columns: 5fr 1.5fr;
+		gap: 0 40px;
+	}
+
+	header, h1, h2, p, blockquote, footer
+	{
+		grid-column: 1 / 2;
+	}
+
+	.tip
+	{
+		grid-column: 2 / -1;
+		width: 100%;
+		margin: 0;
+		height: min-content;
+	}
+
+	.tip:nth-of-type(2)
+	{
+		border-right: none;
+	}
+
+	h1, h2, p, h1, blockquote
+	{
+		text-align: left;
+	}
+
+	h1 
+	{
+		font-size: 48px;
+		margin-bottom: 30px;
+	}
+
+	h2 
+	{
+		font-size: 36px;
+	}
+
+	blockquote 
+	{
+		margin-left: 0;
+	}
+
+	blockquote::before, blockquote::after 
+	{
+		margin: 0;
+	}
+
+	header p:first-of-type
+	{
+	text-align: left;
+	}
+
+	.tip-vlevo, .tip-vpravo
+	{
+		float: none;
+		border-left: 3px solid var(--oranzova);
+		border-right: none;
+	}
+
+	figure 
+	{
+		grid-column: 1 / -1;
+		width: 100%;
+		margin: 30px 0;
+	}
+
+	figure figcaption 
+	{
+		text-align: left;
+	}
+}
+
 @media screen and (min-width: 1000px)
 {
-	
+	.blog
+	{
+		grid-template-columns: 1fr 4fr 2fr;
+	}
+
+	header, p, h2, blockquote, footer
+	{
+		grid-column: 2 / 3;
+	}
+
+	.tip-vlevo
+	{
+		grid-column: 1 / 2;
+	}
+
+	.tip-vpravo
+	{
+		grid-column: 3 / 4;
+	}
+
+	h1 
+	{
+		font-size: 64px;
+		margin-bottom: 50px;
+	}
+
+	h2 
+	{
+		font-size: 42px;
+	}
 }
 
 /* --------------------------------------------------- */
