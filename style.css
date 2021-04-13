@@ -189,6 +189,11 @@ footer p, a
 		margin: 0;
 	}
 
+	blockquote::after
+	{
+		width: 40%;
+	}
+
 	header p:first-of-type
 	{
 	text-align: left;
@@ -221,7 +226,7 @@ footer p, a
 		grid-template-columns: 1fr 4fr 2fr;
 	}
 
-	header, p, h2, blockquote, footer
+	header, p, h2, footer
 	{
 		grid-column: 2 / 3;
 	}
@@ -236,6 +241,19 @@ footer p, a
 		grid-column: 3 / 4;
 	}
 
+	blockquote
+	{
+		grid-column: 1 / -1;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	blockquote::before, blockquote::after 
+	{
+		margin: 0 auto;
+		width: 20%;
+	}
+	
 	h1 
 	{
 		font-size: 64px;
@@ -245,6 +263,12 @@ footer p, a
 	h2 
 	{
 		font-size: 42px;
+	}
+
+	.tip-vlevo
+	{
+		border-right: 3px solid var(--oranzova);
+		border-left: none;
 	}
 }
 
