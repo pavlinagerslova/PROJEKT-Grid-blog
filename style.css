@@ -11,14 +11,127 @@ body {
 	line-height: 1.5;
 }
 
+
 h1, h2, h3 {
 	font-family: 'Kaushan Script', cursive;
 	font-weight: normal;
 	margin: 0;
+	text-align: center;
 }
 
-blockquote {
+h1
+{
+	color: var(--zelena);
+	font-size: 36px;
+}
+
+h2
+{
+	color: var(--zelena);
+	font-size: 30px;
+}
+
+p
+{
+	text-align: justify;
+}
+
+blockquote::before
+{
+	content: "";
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	border-top: 1.5px solid var(--limetka)
+}
+
+blockquote 
+{
 	font-family: 'Kaushan Script', cursive;
+	color: var(--seda);
+	text-align: center;
+	font-size: 24px;
+}
+
+blockquote::after
+{
+	content: "";
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	padding-top: 10px;
+	border-bottom: 1.5px solid var(--limetka);
+}
+
+header p:first-of-type
+{
+	color: var(--tmava);
+	text-align: center;
+}
+
+.tip
+{
+	background-color: var(--svetla);
+	padding: 15px;
+	width: 250px;
+}
+
+.tip p
+{
+	margin: 0;
+	color: var(--tmava);
+}
+
+.tip a 
+{
+	color: var(--cervena);
+}
+
+.tip img
+{
+	width: 100%;
+}
+
+.tip-vlevo
+{
+	border-right: 3px solid var(--oranzova);
+	margin: 0 0 20px 40px;
+	float: right;
+}
+
+.tip-vpravo
+{
+	border-left: 3px solid var(--oranzova);
+	margin: 0 20px 40px 0;
+	float: left;
+}
+
+figure
+{	
+	width: 450px;
+	margin: 0 auto;
+}
+
+figure img
+{
+	width: 100%;
+}
+
+figure figcaption
+{
+	color: var(--seda);
+	text-align: center;
+}
+
+footer p, a
+{
+	color: var(--seda);
+}
+
+@media screen and (min-width: 1000px)
+{
+	
 }
 
 /* --------------------------------------------------- */
